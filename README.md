@@ -17,3 +17,5 @@ Instagram
 ### Restringindo voce !
 sim o aplicativo foi feito e projetado para tentar restringir voce de perder o foco acidentalmente.
 foque na tarefa !
+
+(isso pode ser desativado nas configuraçoes)
