@@ -1,3 +1,6 @@
+## repositorio oficial:
+https://github.com/gustavocodigo/PomodoroClock
+
 ## Oque é a Tecnica de Pomodoro?
 O método Pomodoro é simples e dura duas horas. Primeiro, você realiza uma atividade durante 25 minutos. Quando acabar o tempo, descansa 5 minutos. Assim sucessivamente até que complete as duas horas. Como recompensa, você descansa mais 30 minutos."
 
@@ -14,7 +17,7 @@ Discord
 Whatsapp
 Instagram
 
-### Restringindo voce !
+### Restriçoes ? !
 sim o aplicativo foi feito e projetado para tentar restringir voce de perder o foco acidentalmente.
 foque na tarefa !
 
