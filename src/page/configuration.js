@@ -6,6 +6,9 @@ document.addEventListener("DOMContentLoaded",()=> {
     rangeVolume.addEventListener("input", function() {
         var value = rangeVolume.value;
         document.getElementById("notification-volume-value").textContent = value;
+
+
+        pywebview.api.setVolumeConfiguration(value/100)
         
     });
 })
