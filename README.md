@@ -1,3 +1,6 @@
+# Status
+(em andamento)
+
 ## repositorio oficial:
 https://github.com/gustavocodigo/PomodoroClock
 
