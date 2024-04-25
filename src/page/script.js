@@ -145,6 +145,12 @@ function initialize_pomodoro_logic() {
                 default:
                 // Caso nenhum dos tempos corresponda, não faz nada
             }
+            try{
+                pywebview.api.setClockMessage(timeRest)
+
+            }catch(e){
+                console.log(e)
+            }
 
 
 
@@ -260,9 +266,8 @@ function initialize_pomodoro_short_break_logic() {
             playAudioVolumed(timeToShortBreakSound)
 
 
-        }
 
-        if (currentPomodoroState == POMODORO_STATES.PAUSED) {
+        }else if (currentPomodoroState == POMODORO_STATES.PAUSED) {
             currentPomodoroState = POMODORO_STATES.RUNNING
             clockMessageElement.innerText = "Hora de Descançar !!"
             button.innerHTML = "PAUSAR"
@@ -340,6 +345,9 @@ function initialize_pomodoro_short_break_logic() {
         clockMessageElement.innerText = "Iniciar descanço"
 
 
+        
+
+
     }
 
 
@@ -349,7 +357,24 @@ function initialize_pomodoro_short_break_logic() {
 
 }
 
+
+
+var toastLiveExample = undefined;
+
+
+function showToast(message) {
+    if (toastLiveExample != undefined) {
+        document.getElementById("main-toast-message-div").innerText = message
+        var toast = new bootstrap.Toast(toastLiveExample)
+        toast.show()
+    }
+}
+
+
 document.addEventListener("DOMContentLoaded", () => {
+
+    toastLiveExample = document.getElementById('liveToast')
+    
 
 
     const pomodoro = initialize_pomodoro_logic()
@@ -362,8 +387,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.getElementById("configuration-button").addEventListener("click", function () {
         pywebview.api.showConfigurationWindow()
+        playAudioVolumed(buttonClickSound)
     })
 
+    document.getElementById("pomodoro-floating-button").addEventListener("click", function () {
+        pywebview.api.openSmallClock()
+        playAudioVolumed(buttonClickSound)
+    })
 
     document.getElementById("pomodoro-tab-button").addEventListener("click", () => {
         pomodoro.reset_state()
@@ -381,9 +411,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     async function closeSocialMedias() {
+        
+
         const has = await pywebview.api.closeSocialMedias()
         if (has == true) {
-            dontLetDistractYou(socialMidiasFoundSound)
+            playAudioVolumed(socialMidiasFoundSound)
         }
         setTimeout(closeSocialMedias, 3000)
 
@@ -392,10 +424,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setTimeout(closeSocialMedias, 4000)
 })
-wubd
+
 
 
 
 function setup_configurations(audio_volume_factor) {
     audioVolumeFactor = audio_volume_factor
 }
+
+
+
+window.addEventListener('pywebviewready', async function() {
+    const soundFactor = await pywebview.api.getSoundFactorConfiguration()
+
+
+
+   
+
+
+    
+})

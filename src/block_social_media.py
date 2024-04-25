@@ -3,12 +3,14 @@ from state import State
 
 class BlockSocialMedia:
     def __init__(self):
-        self.social_apps = ["WhatsApp.exe", "Discord.exe"]
+        self.social_apps = []
 
     def block_social_media(self):
         return self.check_and_block_processes()
 
     def check_and_block_processes(self):
+        if len(self.social_apps) == 0:
+             return False
         closed_apps = []
         for proc in psutil.process_iter(['pid', 'name']):
             if proc.info['name'] in self.social_apps:
@@ -32,3 +34,8 @@ class BlockSocialMedia:
         print("Stopping social media blocking...")
         # Implement any cleanup needed when stopping blocking
         print("Social media blocking stopped.")
+    def addBlackList(self, executableName):
+        self.social_apps.append(executableName)
+
+    def clearExecutables(self):
+        self.social_apps.clear()

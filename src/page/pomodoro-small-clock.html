@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./assets/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="./assets/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Pomodoro small clock</title>
+</head>
+
+<body background="#ffffff" style="padding: 0;margin: 0; font-size: 0.7em; border: 1px solid rgb(70, 70, 70); height: 100vh;">
+    <div class="" style="z-index: 11; margin: 0;">
+        <div id="liveToast" class="" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <img src="./assets/tomato.ico" width="20" class="rounded me-2" alt="...">
+                <strong class="me-auto">Pomodoro</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close" id="btn-closee"></button>
+            </div>
+            <div class="toast-body" id="main-toast-message-div">
+                <b id="time">00:00</b>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+<script>
+
+window.addEventListener('pywebviewready', async function () {
+    document.getElementById("btn-closee").addEventListener("click",()=>{
+        pywebview.api.closePopupClock()
+    })
+})
+
+const timeElement = document.getElementById("time")
+function setTime(timeRest){
+    const minutes = Math.floor(timeRest / 60);
+            const seconds = timeRest % 60;
+            const formattedTime = `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+            timeElement.innerText = formattedTime
+
+}
+</script>
