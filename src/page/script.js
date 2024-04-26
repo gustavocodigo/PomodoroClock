@@ -146,7 +146,7 @@ function initialize_pomodoro_logic() {
                 // Caso nenhum dos tempos corresponda, não faz nada
             }
             try{
-                pywebview.api.setClockMessage(timeRest)
+                pywebview.api.setClockMessage(timeRest,pomodoro_configuration.pomodoroSeconds)
 
             }catch(e){
                 console.log(e)

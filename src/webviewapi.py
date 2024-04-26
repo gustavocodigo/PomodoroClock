@@ -87,7 +87,7 @@ class WebViewApi:
         if ( window != None):
             window.destroy()
             State.getInstance().set_data("small-clock-window", None)
-    def setClockMessage(self, timeElapsed):
+    def setClockMessage(self, timeElapsed, timeMax):
         window =   State.getInstance().get_data("small-clock-window")
         if ( window != None):
-            window.evaluate_js("setTime("+str(timeElapsed)+")")
+            window.evaluate_js("setTime("+str(timeElapsed)+","+str(timeMax)+")")

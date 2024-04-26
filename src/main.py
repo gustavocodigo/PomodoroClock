@@ -23,6 +23,6 @@ if __name__ == "__main__":
     mainWindow = webview.create_window('Relógio de pomodoro !', './page/index.html', width=400, height=380, resizable=False, js_api=webview_api)
     State.getInstance().set_data("main-window",mainWindow)
 
-    webview.start(debug=False)
+    webview.start(debug=True)
 
     
