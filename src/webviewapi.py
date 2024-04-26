@@ -91,4 +91,9 @@ class WebViewApi:
         window =   State.getInstance().get_data("small-clock-window")
         if ( window != None):
             window.evaluate_js("setTime("+str(timeElapsed)+","+str(timeMax)+")")
-   
+    def openTaskManagerWindow(self):
+        import webview
+        webview_api = State.getInstance().get_data("webview-api-instance")
+
+        window = webview.create_window("Task Manager",url="./page/task_manager.html",min_size=[10,10], width=300,resizable=True, height=400, background_color="#ffffff", frameless=False, js_api=webview_api, on_top=True)
+        State.getInstance().set_data("task-manager-window", window)

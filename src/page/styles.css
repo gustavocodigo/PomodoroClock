@@ -165,3 +165,30 @@ body {
 .pomodoro-floating-button:hover{
     scale: 1.1;
 }
+
+
+
+
+
+
+.task-manager-floating-button{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    margin: 12px;
+ 
+    background-color: brown;
+    
+    cursor: pointer;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+
+.task-manager-floating-button:hover{
+    scale: 1.1;
+}

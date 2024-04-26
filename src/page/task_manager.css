@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(178, 71, 71);
+}
+
+html::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+/* Para outros navegadores */
+html {
+    scrollbar-width: none; /* Para navegadores Firefox */
+}
+
+.task-card {
+    transition: 0.6s;
+    cursor: pointer;
+
+}
+.task-card:hover
+{
+}
+
+.task-card:active
+{
+}
+
+
+.task-card-completed {
+    border-bottom: 6px solid greenyellow;
+}
+
+.d-invisible {
+    visibility: hidden;
+}

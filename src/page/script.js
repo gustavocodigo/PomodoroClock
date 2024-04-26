@@ -1,9 +1,11 @@
 const alarmSound1 = new Audio('./assets/oldphone.mp3');
+alarmSound1.preload=true
 const buttonClickSound = new Audio("./assets/analog-appliance-button-15-186961.mp3")
+buttonClickSound.preload = true
 const timeToShortBreakSound = new Audio("./assets/hora-do-intervalo.mp3")
+timeToShortBreakSound.preload=true
 const socialMidiasFoundSound = new Audio("./assets/fechamos-redes.mp3")
-
-let audioVolumeFactor = 0.2
+socialMidiasFoundSound.preload=true
 
 const audios_count = {
     "15": new Audio('./assets/faltam-15.mp3'),
@@ -13,11 +15,24 @@ const audios_count = {
     "20": new Audio('./assets/faltam-20.mp3')
 }
 
+for (index in audios_count) {
+    audio = audios_count[index]
+    audio.preload = true
+
+}
+
+let audioVolumeFactor = 0.2
 
 function playAudioVolumed(audio) {
+    audio.pause()
+
+    audio.currentTime=0
+
     audio.volume = audioVolumeFactor
     audio.play()
 }
+
+
 
 
 function initialize_pomodoro_logic() {
@@ -410,6 +425,10 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
 
+
+ 
+
+
     async function closeSocialMedias() {
         
 
@@ -423,6 +442,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     setTimeout(closeSocialMedias, 4000)
+
+
+
+    document.getElementById("task-manager-floating-button").addEventListener("click", () => {
+        playAudioVolumed(buttonClickSound)
+
+        pywebview.api.openTaskManagerWindow()
+
+    })
 })
 
 

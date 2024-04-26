@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./assets/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="./assets/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="./task_manager.css">
+    <script src="./task_manager.js"></script>
+</head>
+<body>
+
+    <div class="flex p-2 "id="tasks-container" style="display: flex; flex-direction:column; gap: 2px; "    >
+        <div class="card task-card " style="width: 100%; margin: auto; font-size: 0.7em; display:none; flex-direction: row; justify-content: space-between; align-items: center; position: relative;transform: translateX(-100%);" id="task-template">
+            <div class="card-body" style="max-width: 100%;">
+              <h5 class="card-title" style="font-size: 1.1em;" contenteditable="true" id ="title" style="outline:none;">Special title treatment</h5>
+              <p class="card-text" id="description" contenteditable="true" style="overflow-wrap: break-word; word-wrap: break-word; outline: none; max-width: 100%; overflow-x: hidden;" >With supporting text below as a natural lead-in to additional content.</p>
+            </div>
+            <div style="width: 58px; right:0; position: absolute; align-items: center; height:100%; justify-content: center; padding: 12px;">
+                <div  class="checkmark d-none" style="cursor: pointer;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="black" class="bi bi-check-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                        <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
+                      </svg>
+                </div>
+
+                <div  class="checkmark2" style="cursor: pointer;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="#00000044" class="bi bi-check-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                        <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
+                      </svg>
+                </div>
+              
+            </div>
+          </div>
+    </div>
+    <div class="mx-2 " style="margin-bottom: 6px;">
+        <button class="btn btn-sm btn-primary w-100 shadow-none" id="new-task-button">NOVA TAREFA</button>
+    </div>
+
+</body>
+</html>
