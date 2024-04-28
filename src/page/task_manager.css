@@ -24,8 +24,31 @@ html {
     cursor: pointer;
 
 }
+
+.delete-button {
+    z-index: 999;
+    width:0; overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s;
+}
+
+
 .task-card:hover
 {
+    .delete-button {
+        z-index: 999;
+        width: 20px;
+        height: 20px;
+        margin-left: 8px;
+        color:gray;
+    }
+
+    .delete-button:hover{
+        color: black;
+    }
+
 }
 
 .task-card:active

@@ -29,7 +29,7 @@ function addTask(title, message) {
     const divElementList = document.getElementById("tasks-container")
 
     const newCardElement = card_task_template.cloneNode(true)
-    setTimeout(()=> {
+    setTimeout(() => {
         newCardElement.style.transform = "translateX(0)"
 
     })
@@ -63,6 +63,19 @@ function addTask(title, message) {
 
 
     }
+
+    newCardElement.querySelector("#delete-icon").onclick = function () {
+        setTimeout(()=>{
+            newCardElement.style.transform = "translateX(-110%)"
+
+        },0)
+    
+        setTimeout(()=> {
+            newCardElement.parentNode.removeChild(newCardElement)
+
+        },2000)
+    }
+
 
 }
 
