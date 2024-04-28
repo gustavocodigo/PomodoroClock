@@ -30,7 +30,7 @@ function addTask(title, message) {
 
     const newCardElement = card_task_template.cloneNode(true)
     setTimeout(() => {
-        newCardElement.style.transform = "translateX(0)"
+        newCardElement.style.transform = "translate(0,0)"
 
     })
     newCardElement.querySelector("#description").innerText = message
@@ -66,14 +66,23 @@ function addTask(title, message) {
 
     newCardElement.querySelector("#delete-icon").onclick = function () {
         setTimeout(()=>{
-            newCardElement.style.transform = "translateX(-110%)"
+            newCardElement.style.transform = "translate(-110%, -100%)"
+            const y = newCardElement.getBoundingClientRect().top
+            const x = newCardElement.getBoundingClientRect().left
+            newCardElement.style.position = "relative"
+
+            newCardElement.top = "-100px"
+
+
+
+            setTimeout(()=> {
+                newCardElement.parentNode.removeChild(newCardElement)
+
+            },500)
 
         },0)
     
-        setTimeout(()=> {
-            newCardElement.parentNode.removeChild(newCardElement)
-
-        },2000)
+       
     }
 
 
