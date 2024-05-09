@@ -27,11 +27,11 @@ class WebViewApi:
         self.closeSoundFactorConfigurationWindow()
         webview_api = State.getInstance().get_data("webview-api-instance")
         main_window = State.getInstance().get_data("main-window")
-        WIDTH = 260
+        WIDTH = 360
         HEIGHT = 340
         TARGET_X = int(round(main_window.x + (main_window.width /2) - WIDTH/2))
         TARGET_Y = int(round(main_window.y + (main_window.height / 2) - HEIGHT/2))
-        window = webview.create_window('Configurações !', './page/configuration.html', width=WIDTH, height=HEIGHT,easy_drag=False, js_api=webview_api, x=TARGET_X, y=TARGET_Y)
+        window = webview.create_window('Configurações !', './Gui/configuration.html', width=WIDTH, height=HEIGHT,easy_drag=False, js_api=webview_api, x=TARGET_X, y=TARGET_Y)
         State.getInstance().set_data("configuration-window", window)
         
         
@@ -61,7 +61,6 @@ class WebViewApi:
     
     def setBlackListedApps(self, list):
         ret = localStorage.setItem("app_blacklist", list)
-        print("Testando")
 
     def closeSoundFactorConfigurationWindow(self):
         window = State.getInstance().get_data("configuration-window")
@@ -79,7 +78,7 @@ class WebViewApi:
         webview_api = State.getInstance().get_data("webview-api-instance")
         self.closePopupClock()
 
-        window = webview.create_window("Clock window",url="./page/pomodoro-small-clock.html",min_size=[10,10], width=140,resizable=True, height=100, background_color="#ffffff", frameless=True, js_api=webview_api, on_top=True)
+        window = webview.create_window("Clock window",url="./Gui/pomodoro-small-clock.html",min_size=[10,10], width=140,resizable=True, height=100, background_color="#ffffff", frameless=True, js_api=webview_api, on_top=True)
         State.getInstance().set_data("small-clock-window", window)
     def closePopupClock(self):
 
@@ -95,5 +94,6 @@ class WebViewApi:
         import webview
         webview_api = State.getInstance().get_data("webview-api-instance")
 
-        window = webview.create_window("Task Manager",url="./page/task_manager.html",min_size=[10,10], width=300,resizable=True, height=400, background_color="#ffffff", frameless=False, js_api=webview_api, on_top=True)
+        window = webview.create_window("Task Manager",url="./Gui/task_manager.html",min_size=[10,10], width=380,resizable=True, height=400, background_color="#ffffff", frameless=False, js_api=webview_api, on_top=True)
         State.getInstance().set_data("task-manager-window", window)
+    

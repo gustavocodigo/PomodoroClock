@@ -37,6 +37,8 @@ function addTask(title, message) {
     newCardElement.querySelector("#title").innerText = title
     newCardElement.style.display = "flex"
     divElementList.appendChild(newCardElement)
+    const task_container = document.getElementById("tasks-container")
+    task_container.scrollTop = task_container.scrollHeight
 
     newCardElement.querySelector(".checkmark2").onclick = function () {
 
@@ -60,6 +62,7 @@ function addTask(title, message) {
         console.log(newCardElement.classList.toggle("task-card-completed"))
         newCardElement.querySelector(".checkmark").classList.toggle("d-none")
         newCardElement.querySelector(".checkmark2").classList.toggle("d-none")
+
 
 
     }
