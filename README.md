@@ -14,14 +14,10 @@ Veja mais sobre "Técnica Pomodoro - o que é e como funciona" em: https://brasi
 é um temporarizador que gerencia esse tempo.
 usando alertas de barulhos para cronometrar, voz natural gerada por IA para informar o tempo restante para o intervalo a cada 5 minutos
 
-### Sereja do bolo !
-Bloqueia redes sociais como
+### Bloqueador de procesos
+Bloqueia redes abrir aplicativos de redes sociais como
 Discord
 Whatsapp
 Instagram
-
-### Restriçoes ? !
-sim o aplicativo foi feito e projetado para tentar restringir voce de perder o foco acidentalmente.
-foque na tarefa !
-
+(links em navegadores ainda nao suportado)
 (isso pode ser desativado nas configuraçoes)
