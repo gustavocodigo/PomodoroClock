@@ -33,4 +33,10 @@ Essas configurações podem ser ajustadas conforme sua necessidade.
 
 
 
-
+### Run
+```
+git clone https://github.com/gustavocodigo/PomodoroClock
+cd PomodoroClock
+pip install -r requirements.txt
+python3 .\src\main.py
+```
