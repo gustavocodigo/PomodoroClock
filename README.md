@@ -18,6 +18,7 @@ O PomodoroClock é um temporizador que ajuda a gerenciar seu tempo de trabalho e
 
 - Alertas sonoros para sinalizar o fim de cada período de trabalho e pausa.
 - Voz natural gerada por IA que informa o tempo restante para o intervalo a cada 5 minutos.
+- Criar uma lista de tarefa para as tarefas do seu projeto.
 
 ### Bloqueador de Processos
 O PomodoroClock também possui um bloqueador de processos que ajuda a evitar distrações. Ele pode:
