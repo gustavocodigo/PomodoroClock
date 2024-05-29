@@ -26,3 +26,16 @@ O PomodoroClock também possui um bloqueador de processos que ajuda a evitar dis
 - (Atualmente, o bloqueio de links em navegadores não é suportado).
 
 Essas configurações podem ser ajustadas conforme sua necessidade.
+
+### Imagens
+![image](https://github.com/gustavocodigo/PomodoroClock/assets/108258194/ddc4eab4-39fb-4637-9c40-f897da562581)
+![image](https://github.com/gustavocodigo/PomodoroClock/assets/108258194/ff95af75-c060-4f47-b10c-a038071a39e7)
+![image](https://github.com/gustavocodigo/PomodoroClock/assets/108258194/fb37a02a-3746-44ea-9643-7ec80d129792)
+![image](https://github.com/gustavocodigo/PomodoroClock/assets/108258194/cf8d1f39-743f-4a6a-8bf3-9958d0b3b1d4)
+![image](https://github.com/gustavocodigo/PomodoroClock/assets/108258194/a446e303-188a-4b8b-956c-3517bb162be4)
+![image](https://github.com/gustavocodigo/PomodoroClock/assets/108258194/f6d54f99-b97b-4389-a354-219f7bdf9610)
+![image](https://github.com/gustavocodigo/PomodoroClock/assets/108258194/9c8a0f98-91a6-4740-adc1-8797f4886142)
+
+
+
+
