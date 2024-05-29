@@ -1,23 +1,28 @@
-# Status
-(em andamento)
+# PomodoroClock
 
-## repositorio oficial:
-https://github.com/gustavocodigo/PomodoroClock
+## Repositório Oficial
+[github.com/gustavocodigo/PomodoroClock](https://github.com/gustavocodigo/PomodoroClock)
 
-## Oque é a Tecnica de Pomodoro?
-O método Pomodoro é simples e dura duas horas. Primeiro, você realiza uma atividade durante 25 minutos. Quando acabar o tempo, descansa 5 minutos. Assim sucessivamente até que complete as duas horas. Como recompensa, você descansa mais 30 minutos."
+## O que é a Técnica de Pomodoro?
+A Técnica Pomodoro é um método simples e eficaz de gestão do tempo que pode melhorar sua produtividade. Funciona assim:
 
-Veja mais sobre "Técnica Pomodoro - o que é e como funciona" em: https://brasilescola.uol.com.br/dicas-de-estudo/tecnica-pomodoro-que-e-e-como-funciona.html
+1. Realize uma atividade por 25 minutos.
+2. Faça uma pausa de 5 minutos.
+3. Repita o ciclo até completar duas horas.
+4. Como recompensa, faça uma pausa mais longa de 30 minutos.
 
+Para mais informações, veja: [Técnica Pomodoro - o que é e como funciona](https://brasilescola.uol.com.br/dicas-de-estudo/tecnica-pomodoro-que-e-e-como-funciona.html)
 
-## Sobre o software
-é um temporarizador que gerencia esse tempo.
-usando alertas de barulhos para cronometrar, voz natural gerada por IA para informar o tempo restante para o intervalo a cada 5 minutos
+## Sobre o Software
+O PomodoroClock é um temporizador que ajuda a gerenciar seu tempo de trabalho e pausas usando a Técnica Pomodoro. Ele oferece:
 
-### Bloqueador de procesos
-Bloqueia redes abrir aplicativos de redes sociais como
-Discord
-Whatsapp
-Instagram
-(links em navegadores ainda nao suportado)
-(isso pode ser desativado nas configuraçoes)
+- Alertas sonoros para sinalizar o fim de cada período de trabalho e pausa.
+- Voz natural gerada por IA que informa o tempo restante para o intervalo a cada 5 minutos.
+
+### Bloqueador de Processos
+O PomodoroClock também possui um bloqueador de processos que ajuda a evitar distrações. Ele pode:
+
+- Bloquear aplicativos de redes sociais como Discord, WhatsApp e Instagram.
+- (Atualmente, o bloqueio de links em navegadores não é suportado).
+
+Essas configurações podem ser ajustadas conforme sua necessidade.
